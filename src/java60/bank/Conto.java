@@ -29,5 +29,22 @@ Nella classe Main andare a definire alcune variabili di tipo Conto e testare la 
  */
 
 public class Conto {
+	
+// variabili d'istanza
+	private int accountNumber;
+	public String meberName;
+	private int bankBalance;
+	String bank = "Unicredit";
 
+	
+	// creiamo il costrutto
+	public Conto(int accountNumber, String meberName, int bankBalance ) {
+		
+		// assegnamo i dati alle variabili d'istanza
+		this.accountNumber = accountNumber;
+		this.meberName = meberName;
+		this.bankBalance = bankBalance;
+		
+		
+	}
 }
