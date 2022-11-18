@@ -65,13 +65,13 @@ public class Conto {
 	}
 	
 	// prelievo dal conto
-	public void getMoney(int money){
+	public boolean getMoney(int money){
 		
-		if ((bankBalance - money) >= 0) { 
-			 bankBalance -= money;
-		}else {
-			System.out.println("non ci sono abbastanza soldi sul conto, saldo attuale. Il tuo saldo è di : " + getBankBalance());
+		if (bankBalance < money ) { 
+			return false;
 		}
+		bankBalance -= money;
+		 return true;
 	}
 	
 	

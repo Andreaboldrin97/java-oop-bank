@@ -43,8 +43,9 @@ public class Main {
 		System.out.println("---------------------");
 		
 		//test prelievo
-		newConto1.getMoney(50);
-		System.out.println( newConto1.getBankBalance() + "$");
+		
+		System.out.println("Il prevelio è andato a buon fine ? " +newConto1.getMoney(50));
+		System.out.println( "Saldo corrente : " + newConto1.getBankBalance() + "$");
 		System.out.println("---------------------");
 		
 		//test cambio nome intestatario
