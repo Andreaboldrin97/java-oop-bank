@@ -33,14 +33,23 @@ public class Main {
 	public static void main(String[] args) {
 		
 		//creo un conto test
-		Conto newConto1 = new Conto(3,"poyo");
+		Conto newConto1 = new Conto(234,"poyo");
 		System.out.println(newConto1);
 		System.out.println("---------------------");
 		
 		//test per l'aggiunta di soldi
 		newConto1.addMoney(100);
 		System.out.println(newConto1);
+		System.out.println("---------------------");
 		
+		//test prelievo
+		newConto1.getMoney(50);
+		System.out.println( newConto1.getBankBalance() + "$");
+		System.out.println("---------------------");
+		
+		//test cambio nome intestatario
+		newConto1.setMeberName("franco");
+		System.out.println(newConto1);
 	}
 
 }

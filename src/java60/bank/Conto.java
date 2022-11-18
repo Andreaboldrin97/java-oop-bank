@@ -47,30 +47,35 @@ public class Conto {
 		
 	}
 	
-	// creo la funzione get per prendere accountNumber e meberName
-	public int getAccountNumber() {
-		return accountNumber;
-	}
+	// creo la funzione get e set per meberName
 	
 	public String getMeberName() {
 		return meberName;
 	}
 	
-	// funzioni per la manipolazione del denaro
-	
-	public int addMoney(int money) {
-		return bankBalance += money;
+	public void setMeberName(String meberName) {
+		this.meberName = meberName;
 	}
 	
-	public int getMoney(int money){
+	// funzioni per la manipolazione del denaro
+	
+	// deposito sul conto
+	public void addMoney(int money) {
+		bankBalance += money;
+	}
+	
+	// prelievo dal conto
+	public void getMoney(int money){
 		
-		if ((bankBalance -= money) >= 0) { 
-			return bankBalance -= money;
+		if ((bankBalance - money) >= 0) { 
+			 bankBalance -= money;
 		}else {
-			return 0;
+			System.out.println("non ci sono abbastanza soldi sul conto, saldo attuale. Il tuo saldo è di : " + getBankBalance());
 		}
 	}
 	
+	
+	// visione del conto
 	public int getBankBalance() {
 		return bankBalance;
 	}
@@ -82,7 +87,7 @@ public class Conto {
 	@Override
 		public String toString() {
 			// TODO Auto-generated method stub
-			return "Codice banca: " + accountNumber
+			return "Codice banca : " + accountNumber
 					+ "\nNome : " + meberName
 					+"\nSaldo : " + bankBalance
 					+ "\nNome banca : " + bank;
