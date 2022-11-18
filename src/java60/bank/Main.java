@@ -35,6 +35,11 @@ public class Main {
 		//creo un conto test
 		Conto newConto1 = new Conto(3,"poyo");
 		System.out.println(newConto1);
+		System.out.println("---------------------");
+		
+		//test per l'aggiunta di soldi
+		newConto1.addMoney(100);
+		System.out.println(newConto1);
 		
 	}
 
