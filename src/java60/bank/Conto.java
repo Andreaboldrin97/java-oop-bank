@@ -38,13 +38,53 @@ public class Conto {
 
 	
 	// creiamo il costrutto
-	public Conto(int accountNumber, String meberName, int bankBalance ) {
+	public Conto(int accountNumber, String meberName ) {
 		
 		// assegnamo i dati alle variabili d'istanza
 		this.accountNumber = accountNumber;
 		this.meberName = meberName;
-		this.bankBalance = bankBalance;
-		
+		this.bankBalance = 0;
 		
 	}
+	
+	// creo la funzione get per prendere accountNumber e meberName
+	public int getAccountNumber() {
+		return accountNumber;
+	}
+	
+	public String getMeberName() {
+		return meberName;
+	}
+	
+	// funzioni per la manipolazione del denaro
+	
+	public int addMoney(int money) {
+		return bankBalance += money;
+	}
+	
+	public int getMoney(int money){
+		
+		if ((bankBalance -= money) >= 0) { 
+			return bankBalance -= money;
+		}else {
+			return 0;
+		}
+	}
+	
+	public int getBankBalance() {
+		return bankBalance;
+	}
+	
+	
+	
+	
+	// creiamo il metodo toString per vedere i dati
+	@Override
+		public String toString() {
+			// TODO Auto-generated method stub
+			return "Codice banca: " + accountNumber
+					+ "\nNome : " + meberName
+					+"\nSaldo : " + bankBalance
+					+ "\nNome banca : " + bank;
+		}
 }

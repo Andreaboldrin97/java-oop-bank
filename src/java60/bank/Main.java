@@ -29,5 +29,13 @@ Nella classe Main andare a definire alcune variabili di tipo Conto e testare la 
  */
 
 public class Main {
+	
+	public static void main(String[] args) {
+		
+		//creo un conto test
+		Conto newConto1 = new Conto(3,"poyo");
+		System.out.println(newConto1);
+		
+	}
 
 }
